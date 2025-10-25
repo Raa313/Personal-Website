@@ -1,0 +1,13 @@
+services:
+  angular-app:
+    build: .
+    container_name: portfolio-dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    command: sh -c "npm install && ng serve --host 0.0.0.0 --poll 2000"
+    stdin_open: true
+    tty: true

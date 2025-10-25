@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <h2>Ryan Harmon</h2>
+    </div>
+    
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" [class.active]="isMenuOpen">
+      <a (click)="scrollToSection('about')">About</a>
+      <a (click)="scrollToSection('skills')">Skills</a>
+      <a (click)="scrollToSection('projects')">Projects</a>
+      <a (click)="scrollToSection('experience')">Experience</a>
+      <a (click)="scrollToSection('contact')">Contact</a>
+    </nav>
+  </div>
+</header>
