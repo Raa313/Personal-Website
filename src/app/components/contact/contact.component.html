@@ -1,1 +1,102 @@
-<p>contact works!</p>
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">
+      I'm always open to discussing new opportunities, collaborations, or just connecting with fellow developers
+    </p>
+
+    <div class="contact-grid">
+      @for (method of contactMethods; track method.title) {
+        <div class="contact-card">
+          <div class="contact-icon">{{ method.icon }}</div>
+          
+          <h3 class="contact-title">{{ method.title }}</h3>
+          
+          <a [href]="method.link" 
+             [target]="method.title === 'LinkedIn' ? '_blank' : '_self'"
+             class="contact-value">
+            {{ method.value }}
+          </a>
+          
+          <p class="contact-description">{{ method.description }}</p>
+          
+          <div class="contact-actions">
+            <a [href]="method.link" 
+               [target]="method.title === 'LinkedIn' ? '_blank' : '_self'"
+               class="btn-contact-primary">
+              @if (method.title === 'Email') {
+                Send Email
+              } @else if (method.title === 'Phone') {
+                Call Now
+              } @else {
+                Visit Profile
+              }
+            </a>
+            
+            @if (method.title !== 'LinkedIn') {
+              <button (click)="copyToClipboard(method.value, method.title)" 
+                      class="btn-contact-secondary">
+                Copy
+              </button>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="availability-section">
+      <div class="availability-card">
+        <div class="availability-icon">🚀</div>
+        <div class="availability-content">
+          <h3>Current Status</h3>
+          <p class="status-badge">Open to Opportunities</p>
+          <p class="availability-text">
+            I'm a recent graduate from Rose-Hulman Institute of Technology, actively seeking 
+            full-time positions in software development, data science, or data engineering. 
+            I'm particularly interested in roles that involve full-stack development, systems 
+            programming, or machine learning applications.
+          </p>
+          <div class="availability-details">
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>Based in Terre Haute, IN • Open to relocation</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">💼</span>
+              <div>
+                <strong>Seeking</strong>
+                <p>Full-time Software Development positions</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">⏰</span>
+              <div>
+                <strong>Availability</strong>
+                <p>Available immediately (May 2025 graduate)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h3>Let's Build Something Great Together</h3>
+      <p>Whether you have a project in mind, want to collaborate, or just want to chat about technology, I'd love to hear from you!</p>
+      <div class="cta-buttons">
+        <a href="mailto:rdharmon313@gmail.com?subject=Let's Connect!&body=Hi Ryan,%0D%0A%0D%0A" 
+           class="btn-cta-primary">
+          Start a Conversation
+        </a>
+        <a href="https://linkedin.com/in/ryan-harmon-876541360" 
+           target="_blank" 
+           class="btn-cta-secondary">
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,305 @@
+.contact {
+  background: white;
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #f8f7ff 0%, #faf5ff 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  border: 2px solid #e9d5ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+  border-color: #8b5cf6;
+}
+
+.contact-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  color: #8b5cf6;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-value {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  word-break: break-word;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-value:hover {
+  color: #8b5cf6;
+}
+
+.contact-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-contact-primary,
+.btn-contact-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-contact-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  color: white;
+}
+
+.btn-contact-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+}
+
+.btn-contact-secondary {
+  background: white;
+  color: #8b5cf6;
+  border: 2px solid #8b5cf6;
+}
+
+.btn-contact-secondary:hover {
+  background: #8b5cf6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Availability Section */
+.availability-section {
+  margin-bottom: 4rem;
+}
+
+.availability-card {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  color: white;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+}
+
+.availability-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.availability-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.status-badge {
+  display: inline-block;
+  background: white;
+  color: #8b5cf6;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.availability-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.availability-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.detail-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.detail-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #f8f7ff 0%, #faf5ff 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  border: 3px solid #e9d5ff;
+}
+
+.cta-section h3 {
+  font-size: 2rem;
+  color: #8b5cf6;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary,
+.btn-cta-secondary {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-cta-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  color: white;
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+}
+
+.btn-cta-secondary {
+  background: white;
+  color: #8b5cf6;
+  border: 2px solid #8b5cf6;
+}
+
+.btn-cta-secondary:hover {
+  background: #8b5cf6;
+  color: white;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .availability-card {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .availability-icon {
+    font-size: 3rem;
+  }
+
+  .availability-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-section {
+    padding: 2rem;
+  }
+
+  .cta-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+  }
+}

@@ -1,0 +1,369 @@
+.experience {
+  background: linear-gradient(135deg, #f8f7ff 0%, #faf5ff 100%);
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-heading {
+  font-size: 1.8rem;
+  color: #8b5cf6;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #8b5cf6 0%, #6366f1 100%);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 4px solid #8b5cf6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+}
+
+.timeline-icon {
+  font-size: 1.8rem;
+}
+
+.timeline-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+  border: 2px solid #e9d5ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9d5ff;
+}
+
+.experience-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  color: #8b5cf6;
+  margin: 0;
+  font-weight: 700;
+}
+
+.experience-type {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.experience-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.company {
+  color: #555;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.period {
+  color: #8b5cf6;
+  font-weight: 600;
+  margin: 0;
+}
+
+.experience-description {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.responsibilities h4 {
+  color: #8b5cf6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.responsibilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  padding: 0.5rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.responsibilities li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #8b5cf6;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Education Section */
+.education-section {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.education-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+  border: 3px solid #8b5cf6;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.25);
+}
+
+.education-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-header {
+  margin-bottom: 1rem;
+}
+
+.education-degree {
+  font-size: 1.6rem;
+  color: #8b5cf6;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.education-minor {
+  display: inline-block;
+  background: #e9d5ff;
+  color: #8b5cf6;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.education-meta {
+  margin-bottom: 1.5rem;
+}
+
+.education-school {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.education-location {
+  color: #666;
+  margin: 0.25rem 0 0 0;
+}
+
+.education-highlights h4 {
+  color: #8b5cf6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.education-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-highlights li {
+  padding: 0.5rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.education-highlights li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: #8b5cf6;
+  font-size: 1.2rem;
+}
+
+/* Resume CTA */
+.resume-cta {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.resume-content h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.resume-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #8b5cf6;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 60px;
+  }
+
+  .timeline-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .timeline-icon {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .experience-title {
+    font-size: 1.2rem;
+  }
+
+  .education-card {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .education-icon {
+    font-size: 3rem;
+  }
+
+  .resume-cta {
+    padding: 2rem;
+  }
+
+  .resume-content h3 {
+    font-size: 1.5rem;
+  }
+}
