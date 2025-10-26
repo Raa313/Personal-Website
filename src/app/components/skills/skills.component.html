@@ -1,1 +1,51 @@
-<p>skills works!</p>
+<section class="skills" id="skills">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-subtitle">
+      A comprehensive toolkit built through academics, professional experience, and personal projects
+    </p>
+    
+    <div class="skills-grid">
+      @for (category of skillCategories; track category.title) {
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="category-icon">{{ category.icon }}</span>
+            <h3 class="category-title">{{ category.title }}</h3>
+          </div>
+          
+          <div class="skills-list">
+            @for (skill of category.skills; track skill.name) {
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">{{ skill.name }}</span>
+                  <span class="skill-percentage">{{ skill.level }}%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" [style.width.%]="skill.level"></div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="additional-skills">
+      <h3>Additional Competencies</h3>
+      <div class="tags">
+        <span class="tag">Full-Stack Development</span>
+        <span class="tag">Systems Programming</span>
+        <span class="tag">Data Engineering</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Computer Architecture</span>
+        <span class="tag">Robotics</span>
+        <span class="tag">API Development</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Network Infrastructure</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Team Collaboration</span>
+        <span class="tag">Technical Documentation</span>
+      </div>
+    </div>
+  </div>
+</section>
