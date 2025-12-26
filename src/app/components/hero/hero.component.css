@@ -2,15 +2,59 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f8f7ff 0%, #faf5ff 100%);
   padding-top: 80px;
+  position: relative;
+  
+  background-image: url('../../../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+}
+
+.hero-intro {
+  position: relative;
+  padding: .5rem 1rem;
+  z-index: 1;
+}
+/* The soft panel */
+.hero-intro::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  bottom: -1rem;
+  left: -1.5rem;
+  right: -1.5rem;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+
+  /* Fade edges */
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,1) 55%,
+    rgba(0,0,0,0) 100%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,1) 55%,
+    rgba(0,0,0,0) 100%
+  );
+
+  z-index: -1;
 }
 
 .hero-title {
@@ -18,87 +62,94 @@
   font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.2;
+  color: #F5F7FA;
+  text-shadow: 
+    0 1px 3px rgba(0,0,0,0.8),
+    0 0 8px rgba(0,0,0,0.4);
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+/* .gradient-text {
+  background: linear-gradient(135deg, #6A5AE0,0%, #6366f1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #6366f1;
+  color: #B6C7FF;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  text-shadow: 
+    0 1px 3px rgba(0,0,0,0.8),
+    0 0 8px rgba(0,0,0,0.4);
 }
 
 .hero-description {
   font-size: 1.1rem;
-  color: #666;
+  color: #D1D5DB;
   margin-bottom: 2rem;
   line-height: 1.8;
+  text-shadow: 
+    0 1px 3px rgba(0,0,0,0.8),
+    0 0 8px rgba(0,0,0,0.4);
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2rem;
 }
 
 .btn {
-  padding: 0.875rem 2rem;
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 1.6rem;
+  font-size: 0.95rem;
   font-weight: 600;
+  letter-spacing: 0.02em;
+
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s;
   text-decoration: none;
-  display: inline-block;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  color: white;
-  border: none;
+.btn-primary, .btn-secondary {
+  box-shadow:
+    0 8px 24px rgba(123, 108, 255, 0.35),
+    inset 0 1px 0 rgba(255,255,255,0.25);
 }
 
-.btn-primary:hover {
+
+.btn-primary:hover, .btn-secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  background: #636670;
 }
 
-.btn-secondary {
-  background: white;
-  color: #8b5cf6;
-  border: 2px solid #8b5cf6;
-}
-
-.btn-secondary:hover {
-  background: #8b5cf6;
-  color: white;
-  transform: translateY(-2px);
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url('../../../assets/images/ryan-harmon-profile.jpg');
+  background-size: cover; /* or 'contain' */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; /* set your desired width */
+  height: 100%; /* set your desired height */
+  border-radius: 50%; /* if you want circular */
 }
 
-.avatar-placeholder {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  color: white;
-  font-weight: 700;
-  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
-}
 
 @media (max-width: 968px) {
   .hero-content {

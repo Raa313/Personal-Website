@@ -1,5 +1,18 @@
 import { Component } from '@angular/core';
 
+interface Skill {
+  name: string;
+  category?: string;
+}
+
+interface SkillLevel {
+  level: string;
+  description: string;
+  color: string;
+  icon: string;
+  skills: Skill[];
+}
+
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -8,63 +21,81 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
-  skillCategories = [
+  public skillLevels: SkillLevel[] = [
     {
-      title: 'Languages',
-      icon: '💻',
+      level: 'Expert',
+      description: 'Deep understanding and extensive hands-on experience',
+      color: '(255,255,255,0.04)',
+      icon: '🏆',
       skills: [
-        { name: 'Java', level: 90 },
-        { name: 'Python', level: 90 },
-        { name: 'Rust', level: 85 },
-        { name: 'C/C++', level: 85 },
-        { name: 'C#', level: 80 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'SQL', level: 85 },
-        { name: 'Scheme', level: 75 },
-        { name: 'Verilog', level: 70 },
-        { name: 'Assembly', level: 70 }
+        { name: 'Java', category: 'Language' },
+        { name: 'Python', category: 'Language' },
+        { name: 'Git', category: 'Tool' },
+        { name: 'VS Code', category: 'Tool' },
+        { name: 'Docker', category: 'Tool' },
+        { name: 'Problem Solving', category: 'Soft Skill' }
       ]
     },
     {
-      title: 'Frameworks & Tools',
-      icon: '🛠️',
+      level: 'Proficient',
+      description: 'Strong working knowledge and practical project experience',
+      color: '(255,255,255,0.04)',
+      icon: '⭐',
       skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Angular', level: 80 },
-        { name: 'OpenGL', level: 80 },
-        { name: 'Git', level: 90 },
-        { name: 'Docker', level: 85 },
-        { name: 'Agile/Scrum', level: 85 },
-        { name: 'VS Code', level: 90 },
-        { name: 'Eclipse', level: 80 }
+        { name: 'Rust', category: 'Language' },
+        { name: 'C/C++', category: 'Language' },
+        { name: 'JavaScript', category: 'Language' },
+        { name: 'SQL', category: 'Language' },
+        { name: 'Node.js', category: 'Framework' },
+        { name: 'Angular', category: 'Framework' },
+        { name: 'MySQL', category: 'Database' },
+        { name: 'PostgreSQL', category: 'Database' },
+        { name: 'Pandas', category: 'ML/Data' },
+        { name: 'NumPy', category: 'ML/Data' },
+        { name: 'Linux/Unix', category: 'Platform' },
+        { name: 'OpenGL', category: 'Framework' }
       ]
     },
     {
-      title: 'Databases',
-      icon: '🗄️',
+      level: 'Intermediate',
+      description: 'Comfortable using with growing expertise',
+      color: '(255,255,255,0.04)',
+      icon: '📚',
       skills: [
-        { name: 'MySQL', level: 85 },
-        { name: 'PostgreSQL', level: 85 }
+        { name: 'C#', category: 'Language' },
+        { name: 'Scikit-learn', category: 'ML/Data' },
+        { name: 'TensorFlow', category: 'ML/Data' },
+        { name: 'Agile/Scrum', category: 'Methodology' },
+        { name: 'Eclipse', category: 'Tool' },
+        { name: 'Embedded Systems', category: 'Platform' }
       ]
     },
     {
-      title: 'Data Science & ML',
-      icon: '📊',
+      level: 'Familiar',
+      description: 'Working knowledge through academic or project exposure',
+      color: '(255,255,255,0.04)',
+      icon: '🌱',
       skills: [
-        { name: 'Pandas', level: 85 },
-        { name: 'NumPy', level: 85 },
-        { name: 'Scikit-learn', level: 80 },
-        { name: 'TensorFlow', level: 75 }
-      ]
-    },
-    {
-      title: 'Systems & Platforms',
-      icon: '⚙️',
-      skills: [
-        { name: 'Linux/Unix', level: 85 },
-        { name: 'Windows', level: 90 },
-        { name: 'Embedded Systems', level: 75 }
+        { name: 'Scheme', category: 'Language' },
+        { name: 'Verilog', category: 'Language' },
+        { name: 'Assembly', category: 'Language' },
+        { name: 'Quartus', category: 'Tool' },
+        { name: 'Computer Architecture', category: 'Concept' },
+        { name: 'Cybersecurity', category: 'Concept' }
       ]
     }
+  ];
+
+  public additionalCompetencies: string[] = [
+    'Full-Stack Development',
+    'Systems Programming',
+    'Data Engineering',
+    'Machine Learning',
+    'Robotics',
+    'API Development',
+    'Network Infrastructure',
+    'Technical Documentation',
+    'Team Collaboration',
+    'Waterfall Methodology'
   ];
 }

@@ -62,10 +62,9 @@ export class ExperienceComponent {
     graduation: 'May 2025',
     icon: '🎓',
     highlights: [
-      'International Baccalaureate Graduate (May 2021)',
       'Active member of RoboMasters Robotics Team - Controls Subgroup',
       'Completed advanced coursework in Systems Programming, Computer Architecture, and Machine Learning',
-      'Collaborated on multiple team-based projects using Agile/Scrum methodologies'
+      'Collaborated on multiple team-based projects using Agile/Scrum and XP methodologies'
     ]
   };
 }

@@ -2,49 +2,45 @@
   <div class="container">
     <h2 class="section-title">Technical Skills</h2>
     <p class="section-subtitle">
-      A comprehensive toolkit built through academics, professional experience, and personal projects
+      Organized by proficiency level and hands-on experience
     </p>
-    
-    <div class="skills-grid">
-      @for (category of skillCategories; track category.title) {
-        <div class="skill-category">
-          <div class="category-header">
-            <span class="category-icon">{{ category.icon }}</span>
-            <h3 class="category-title">{{ category.title }}</h3>
+
+    <div class="skills-levels">
+      @for (level of skillLevels; track level.level) {
+        <div class="skill-level-box" [style.border-color]="level.color">
+          <div class="level-header" [style.background-color]="level.color">
+            <span class="level-icon">{{ level.icon }}</span>
+            <div class="level-title-group">
+              <h3 class="level-title">{{ level.level }}</h3>
+              <p class="level-description">{{ level.description }}</p>
+            </div>
           </div>
-          
-          <div class="skills-list">
-            @for (skill of category.skills; track skill.name) {
-              <div class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">{{ skill.name }}</span>
-                  <span class="skill-percentage">{{ skill.level }}%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-progress" [style.width.%]="skill.level"></div>
-                </div>
+
+          <div class="skills-grid">
+            @for (skill of level.skills; track skill.name) {
+              <div class="skill-tag">
+                <span class="skill-name">{{ skill.name }}</span>
+                <br>
+                @if (skill.category) {
+                  <span class="skill-category">{{ skill.category }}</span>
+                }
               </div>
             }
           </div>
+
+          <!-- <div class="skill-count">
+            {{ level.skills.length }} skills
+          </div> -->
         </div>
       }
     </div>
 
     <div class="additional-skills">
-      <h3>Additional Competencies</h3>
-      <div class="tags">
-        <span class="tag">Full-Stack Development</span>
-        <span class="tag">Systems Programming</span>
-        <span class="tag">Data Engineering</span>
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Computer Architecture</span>
-        <span class="tag">Robotics</span>
-        <span class="tag">API Development</span>
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">Network Infrastructure</span>
-        <span class="tag">Problem Solving</span>
-        <span class="tag">Team Collaboration</span>
-        <span class="tag">Technical Documentation</span>
+      <h3>Additional Competencies & Domains</h3>
+      <div class="competency-tags">
+        @for (competency of additionalCompetencies; track competency) {
+          <span class="competency-tag">{{ competency }}</span>
+        }
       </div>
     </div>
   </div>

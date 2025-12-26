@@ -34,21 +34,6 @@ export class ProjectsComponent {
       date: 'Fall 2022'
     },
     {
-      title: 'Full-Stack Booking Platform',
-      subtitle: 'Government Inmate Intake System',
-      description: 'Designed and developed a full-stack booking platform for Washoe County to streamline inmate intake processes, including indigent status cataloging and Microsoft account integration.',
-      technologies: ['Full-Stack', 'Node.js', 'Microsoft Authentication', 'SQL', 'Security Protocols'],
-      highlights: [
-        'Streamlined inmate intake workflows',
-        'Reduced manual data entry significantly',
-        'Migrated to Microsoft account synchronization',
-        'Implemented group-based security protocols',
-        'Collaborated directly with government stakeholders'
-      ],
-      icon: '🏛️',
-      date: 'Summer 2024'
-    },
-    {
       title: 'Programming Language Interpreter',
       subtitle: 'Scheme Language Implementation',
       description: 'Implemented a complete Scheme interpreter with lexical analysis, syntax parsing, and code execution. Validated through 200+ test programs with full execution support.',
@@ -77,21 +62,6 @@ export class ProjectsComponent {
       ],
       icon: '⚡',
       date: 'Spring 2023'
-    },
-    {
-      title: 'RoboMasters Competition Robots',
-      subtitle: 'International Robot Combat Systems',
-      description: 'Designed and programmed robot control frameworks in C++/Python for international robot combat competitions. Integrated sensors and hardware with real-time control systems.',
-      technologies: ['C++', 'Python', 'Robotics', 'Real-Time Systems', 'Sensor Integration'],
-      highlights: [
-        'Designed control frameworks for 3 competition robots',
-        'Real-time robot control system integration',
-        'External sensor and hardware integration',
-        'Successfully deployed in international competitions',
-        'Cross-functional team collaboration'
-      ],
-      icon: '🤖',
-      date: 'Ongoing'
     }
   ];
 }
