@@ -1,12 +1,15 @@
+:root {
+  --bg-main: #ffffff;
+  --text-main: #0f172a;      /* near-black */
+  --text-muted: #475569;    /* slate gray */
+  --border-soft: #e5e7eb;   /* light gray */
+  --accent: #111827;        /* almost-black */
+}
+
 .skills {
   padding: 100px 0;
   position: relative;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(10, 10, 15, 0.85),
-      rgba(10, 10, 15, 0.95)
-    );
+  background: var(--bg-main);
   backdrop-filter: blur(6px);
 }
 
@@ -14,9 +17,7 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #f5f5f7;
-  /* background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  -webkit-background-clip: text; */
+  color: var(--text-main);
   -webkit-text-fill-color: unset;
   background-clip: text;
 }
@@ -24,7 +25,7 @@
 .section-subtitle {
   text-align: center;
   font-size: 1.1rem;
-  color:rgba(255, 255, 255, 0.65);
+  color: var(--text-muted);
   margin-bottom: 4rem;
   max-width: 600px;
   margin-left: auto;
@@ -38,31 +39,35 @@
 }
 
 .skill-level-box {
-  background: rgba(20, 20, 30, 0.65);
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  /* box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.03),
-    0 20px 50px rgba(0, 0, 0, 0.6);
+    0 20px 50px rgba(0, 0, 0, 0.6); */
 }
 
 .skill-level-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
 .level-header {
   padding: 2rem;
-  color: white;
+  /* color: white; */
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  background: #fafafa;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .level-icon {
   font-size: 3rem;
   flex-shrink: 0;
+  color: var(--accent);
 }
 
 .level-title-group {
@@ -73,6 +78,7 @@
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
   font-weight: 700;
+  color: var(--text-main);
 }
 
 .level-description {
@@ -80,6 +86,7 @@
   font-size: 1rem;
   opacity: 0.95;
   font-weight: 500;
+  color: var(--text-muted);
 }
 
 .skills-grid {
@@ -90,44 +97,33 @@
 }
 
 .skill-tag {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #e5e7eb;
-  border-radius: 14px;
-  padding: 0.9rem 1.1rem;
-  backdrop-filter: blur(4px);
+  background: #f9fafb;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
 }
 
 .skill-tag:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff;
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .skill-name {
-  font-weight: 700;
-  color: rgba(255,255,255, 0.7);
-  font-size: 1rem;
-  padding: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 .skill-category {
-  text-align: center;
-  font-size: 0.75rem;
-  color: #8b5cf6;
-  font-weight: 600;
+  font-size: 0.7rem;
+  color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.06em;
 }
-
-/* .skill-count {
-  padding: 1rem 2rem;
-  background: #f8f7ff;
-  text-align: center;
-  font-weight: 600;
-  color: #666;
-  font-size: 0.9rem;
-  border-top: 2px solid #e9d5ff;
-} */
 
 /* Additional Skills Section */
 
@@ -135,16 +131,20 @@
   background: white;
   border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
-  border: 3px solid #e9d5ff;
+  border: 3px solid var(--border-soft);
+}
+
+.additional-skills:hover {
+  box-shadow: 0 12px 40px var(--accent);
 }
 
 .additional-skills h3 {
   font-size: 1.8rem;
-  color: #8b5cf6;
+  color: var(--text-main);
   margin-bottom: 1.5rem;
   text-align: center;
   font-weight: 700;
+  border: var(--border-soft);
 }
 
 .competency-tags {
@@ -155,8 +155,8 @@
 }
 
 .competency-tag {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  color: white;
+  background: var(--accent);
+  color: var(--text-muted);
   padding: 0.7rem 1.3rem;
   border-radius: 25px;
   font-size: 0.95rem;
@@ -167,7 +167,7 @@
 
 .competency-tag:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
