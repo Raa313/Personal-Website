@@ -5,18 +5,16 @@
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0f172a;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .section-subtitle {
   text-align: center;
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1.05rem;
+  color: #475569;
   margin-bottom: 4rem;
   max-width: 700px;
   margin-left: auto;
@@ -31,49 +29,47 @@
 }
 
 .contact-card {
-  background: linear-gradient(135deg, #f8f7ff 0%, #faf5ff 100%);
-  border-radius: 20px;
-  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.25rem;
   text-align: center;
-  border: 2px solid #e9d5ff;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
-  border-color: #8b5cf6;
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
 }
 
 .contact-icon {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
 .contact-title {
-  font-size: 1.5rem;
-  color: #8b5cf6;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
   font-weight: 700;
 }
 
 .contact-value {
   display: block;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1rem;
+  color: #0f172a;
   font-weight: 600;
-  margin-bottom: 1rem;
-  word-break: break-word;
+  margin-bottom: 0.75rem;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .contact-value:hover {
-  color: #8b5cf6;
+  text-decoration: underline;
 }
 
 .contact-description {
-  color: #666;
+  color: #475569;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -85,39 +81,33 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
-.btn-contact-primary,
-.btn-contact-secondary {
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-  border: none;
-}
-
 .btn-contact-primary {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  background: #0f172a;
   color: white;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-contact-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-contact-secondary {
-  background: white;
-  color: #8b5cf6;
-  border: 2px solid #8b5cf6;
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid #cbd5f5;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .btn-contact-secondary:hover {
-  background: #8b5cf6;
-  color: white;
-  transform: translateY(-2px);
+  background: #f1f5f9;
 }
 
 /* Availability Section */
@@ -126,14 +116,14 @@
 }
 
 .availability-card {
-  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  border-radius: 20px;
+  background: #0f172a;
+  border-radius: 22px;
   padding: 3rem;
   color: white;
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 .availability-icon {
@@ -143,38 +133,31 @@
 
 .availability-content h3 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: white;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
 }
 
 .status-badge {
   display: inline-block;
   background: white;
-  color: #8b5cf6;
-  padding: 0.5rem 1.2rem;
-  border-radius: 25px;
+  color: #0f172a;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
   font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
 }
 
 .availability-text {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: #e5e7eb;
 }
-
 .availability-details {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.detail-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
 }
 
 .detail-icon {
@@ -183,9 +166,12 @@
 }
 
 .detail-item strong {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.detail-item p {
+  color: #cbd5e1;
+  font-size: 0.9rem;
 }
 
 .detail-item p {
