@@ -31,22 +31,21 @@ export class ProjectsComponent {
         'Async/await support for complex animations'
       ],
       icon: '🎮',
-      date: 'Fall 2022'
+      date: 'Fall 2024 - Spring 2025'
     },
     {
       title: 'Programming Language Interpreter',
       subtitle: 'Scheme Language Implementation',
-      description: 'Implemented a complete Scheme interpreter with lexical analysis, syntax parsing, and code execution. Validated through 200+ test programs with full execution support.',
+      description: 'Implemented a Scheme interpreter with lexical analysis, syntax parsing, and code execution. Validated through 200+ test programs with ability to interpret itself.',
       technologies: ['Scheme', 'Compiler Design', 'Parser', 'Lexical Analysis'],
       highlights: [
-        'Full lexical analysis and syntax parsing',
-        'Complete code execution engine',
-        'Validated with 200+ test programs',
-        'Achieved full Scheme feature support',
+        'Garbage collection implementation',
+        'Tail call optimization for performance',
+        'Achieved core Scheme feature support',
         'Collaborative development with effective task division'
       ],
       icon: '🔤',
-      date: 'Winter 2022'
+      date: 'Fall 2024'
     },
     {
       title: 'Custom Computer Processor',
