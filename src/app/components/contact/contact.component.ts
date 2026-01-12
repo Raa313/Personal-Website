@@ -24,13 +24,13 @@ export class ContactComponent {
       link: 'mailto:rdharmon313@gmail.com',
       description: 'Best for detailed inquiries and professional communication'
     },
-    {
-      icon: '📱',
-      title: 'Phone',
-      value: '+1 (775) 762-6628',
-      link: 'tel:+17757626628',
-      description: 'Available for quick conversations'
-    },
+    // {
+    //   icon: '📱',
+    //   title: 'Phone',
+    //   value: '+1 (775) 762-6628',
+    //   link: 'tel:+17757626628',
+    //   description: 'Available for quick conversations'
+    // },
     {
       icon: '💼',
       title: 'LinkedIn',
