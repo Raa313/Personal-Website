@@ -1,1 +1,61 @@
-<p>Redirecting works</p>
+<div class="auth-container">
+  <div class="auth-card">
+    <h1>Welcome to VTT</h1>
+    <h2>{{ isSignInMode ? 'Sign In' : 'Create Account' }}</h2>
+    
+    <form (ngSubmit)="onSubmit()" #authForm="ngForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Enter your email"
+          required
+          email
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Enter your password"
+          required
+          minlength="6"
+        />
+      </div>
+
+      <div class="form-group" *ngIf="!isSignInMode">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          placeholder="Confirm your password"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn-primary">
+        {{ isSignInMode ? 'Sign In' : 'Create Account' }}
+      </button>
+    </form>
+
+    <div class="toggle-mode">
+      <p *ngIf="isSignInMode">
+        Don't have an account? 
+        <a (click)="toggleMode()">Create one</a>
+      </p>
+      <p *ngIf="!isSignInMode">
+        Already have an account? 
+        <a (click)="toggleMode()">Sign in</a>
+      </p>
+    </div>
+  </div>
+</div>
