@@ -1,19 +1,16 @@
 import { Routes } from '@angular/router';
+import { VttLayoutComponent } from './layout/vtt-layout.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 
 export const VTT_ROUTES: Routes = [
-//   {
-//     path: '',
-//     loadComponent: () =>
-//       import('./pages/landing/landing.component').then(m => m.LandingComponent)
-//   },
-//   {
-//     path: 'lobby',
-//     loadComponent: () =>
-//       import('./pages/lobby/lobby.component').then(m => m.LobbyComponent)
-//   },
-//   {
-//     path: 'table',
-//     loadComponent: () =>
-//       import('./pages/table/table.component').then(m => m.TableComponent)
-//   }
+  {
+    path: '',
+    component: VttLayoutComponent,
+    children: [
+      {
+        path: 'sign-in',
+        component: SignInComponent
+      }
+    ]
+  }
 ];

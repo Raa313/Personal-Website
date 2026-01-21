@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    RouterModule
+    ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class PortfolioHeaderComponent {
   isMenuOpen = false;
 
   toggleMenu() {
@@ -22,4 +26,16 @@ export class HeaderComponent {
     }
     this.isMenuOpen = false;
   }
+
+  // Dropdown menu state
+  isOpen = false;
+
+  open() {
+    this.isOpen = true;
+  }
+
+  close() {
+    this.isOpen = false;
+  }
+
 }

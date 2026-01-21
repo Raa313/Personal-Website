@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '../components/header/header.component';
+import { PortfolioHeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { HeroComponent } from '../pages/hero/hero.component';
 import { AboutComponent } from '../pages/about/about.component';
@@ -14,7 +14,7 @@ import { ContactComponent } from '../pages/contact/contact.component';
   selector: 'app-portfolio-layout',
   imports: [
     RouterOutlet,
-    HeaderComponent,
+    PortfolioHeaderComponent,
     FooterComponent,
     HeroComponent,
     AboutComponent,

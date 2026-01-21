@@ -16,6 +16,21 @@
       <a (click)="scrollToSection('projects')">Projects</a>
       <a (click)="scrollToSection('experience')">Experience</a>
       <a (click)="scrollToSection('contact')">Contact</a>
+
+      <!-- Dropdown Menu -->
+      <div class="dropdown" (mouseenter)="open()" (mouseleave)="close()">
+        <a class="nav-link dropdown-trigger">
+          Other <span class="caret">▾</span>
+        </a>
+    
+        <div class="dropdown-menu" *ngIf="isOpen">
+          <a routerLink="/vtt/sign-in">VTT</a>
+        </div>
+      </div>
     </nav>
+
+    
   </div>
+
+
 </header>
