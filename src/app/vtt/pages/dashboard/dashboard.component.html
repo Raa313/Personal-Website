@@ -1,0 +1,94 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1>Dashboard</h1>
+    <p class="welcome-text">Welcome back to your Virtual Table Top</p>
+  </header>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stat-card">
+      <div class="stat-icon">📊</div>
+      <div class="stat-content">
+        <div class="stat-label">Total Campaigns</div>
+        <div class="stat-value">{{ stats.totalCampaigns }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">🎮</div>
+      <div class="stat-content">
+        <div class="stat-label">Active Campaigns</div>
+        <div class="stat-value">{{ stats.activeCampaigns }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-content">
+        <div class="stat-label">Total Characters</div>
+        <div class="stat-value">{{ stats.totalCharacters }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">📅</div>
+      <div class="stat-content">
+        <div class="stat-label">Total Sessions</div>
+        <div class="stat-value">{{ stats.totalSessions }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Actions Section -->
+  <section class="quick-actions-section">
+    <h2>Quick Actions</h2>
+    <div class="actions-grid">
+      <a 
+        *ngFor="let action of quickActions"
+        [routerLink]="action.path"
+        class="action-card"
+      >
+        <span class="action-icon">{{ action.icon }}</span>
+        <span class="action-label">{{ action.label }}</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Campaigns Section -->
+  <section class="campaigns-section">
+    <div class="section-header">
+      <h2>Recent Campaigns</h2>
+      <a routerLink="/vtt/campaigns" class="view-all-link">View All →</a>
+    </div>
+
+    <div *ngIf="isLoading" class="loading">Loading campaigns...</div>
+
+    <div *ngIf="!isLoading && campaigns.length === 0" class="no-campaigns">
+      <p>No campaigns yet. <a routerLink="/vtt/new-campaign">Create one now!</a></p>
+    </div>
+
+    <div *ngIf="!isLoading && campaigns.length > 0" class="campaigns-list">
+      <div *ngFor="let campaign of campaigns" class="campaign-card">
+        <div class="campaign-header">
+          <h3>{{ campaign.name }}</h3>
+          <span class="status-badge" [ngClass]="getStatusClass(campaign.status)">
+            {{ campaign.status | titlecase }}
+          </span>
+        </div>
+
+        <div class="campaign-info">
+          <span class="info-item">
+            <span class="info-icon">👥</span>
+            {{ campaign.players }} Players
+          </span>
+          <span class="info-item">
+            <span class="info-icon">📅</span>
+            {{ formatDate(campaign.lastPlayed) }}
+          </span>
+        </div>
+
+        <button class="campaign-action">Continue Playing</button>
+      </div>
+    </div>
+  </section>
+</div>

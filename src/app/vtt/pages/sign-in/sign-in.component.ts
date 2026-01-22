@@ -64,9 +64,9 @@ export class SignInComponent {
         this.successMessage = 'Login successful! Redirecting...';
         console.log('User logged in:', response.user);
         
-        // Redirect to dashboard or home page after 1 second
+        // Redirect to dashboard after 1 second
         setTimeout(() => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/vtt/dashboard']);
         }, 1000);
       },
       error: (error) => {
@@ -108,9 +108,9 @@ export class SignInComponent {
         this.successMessage = 'Account created successfully! Redirecting...';
         console.log('User registered:', response.user);
         
-        // Redirect to dashboard or home page after 1 second
+        // Redirect to dashboard after 1 second
         setTimeout(() => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/vtt/dashboard']);
         }, 1000);
       },
       error: (error) => {
