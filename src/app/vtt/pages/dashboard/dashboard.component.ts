@@ -12,9 +12,7 @@ interface Campaign {
 
 interface DashboardStats {
   totalCampaigns: number;
-  activeCampaigns: number;
   totalCharacters: number;
-  totalSessions: number;
 }
 
 @Component({
@@ -27,17 +25,13 @@ export class DashboardComponent implements OnInit {
   campaigns: Campaign[] = [];
   stats: DashboardStats = {
     totalCampaigns: 0,
-    activeCampaigns: 0,
     totalCharacters: 0,
-    totalSessions: 0
   };
   isLoading = false;
 
   quickActions = [
     { label: 'New Campaign', icon: '✨', path: '/vtt/new-campaign' },
-    { label: 'Browse Campaigns', icon: '🗺️', path: '/vtt/campaigns' },
-    { label: 'Character Sheet', icon: '🧙', path: '/vtt/character' },
-    { label: 'Dice Roller', icon: '🎲', path: '/vtt/dice' }
+    { label: 'New Character', icon: '🧙', path: '/vtt/new-character' },
   ];
 
   ngOnInit() {
@@ -49,36 +43,6 @@ export class DashboardComponent implements OnInit {
     
     // Mock data - replace with actual API calls
     setTimeout(() => {
-      this.campaigns = [
-        {
-          id: 1,
-          name: 'Dragon\'s Hoard Quest',
-          players: 5,
-          status: 'active',
-          lastPlayed: new Date('2025-01-20')
-        },
-        {
-          id: 2,
-          name: 'Shadow of Mordor',
-          players: 4,
-          status: 'active',
-          lastPlayed: new Date('2025-01-18')
-        },
-        {
-          id: 3,
-          name: 'Lost City Expedition',
-          players: 3,
-          status: 'paused',
-          lastPlayed: new Date('2025-01-10')
-        }
-      ];
-
-      this.stats = {
-        totalCampaigns: 8,
-        activeCampaigns: 2,
-        totalCharacters: 12,
-        totalSessions: 24
-      };
 
       this.isLoading = false;
     }, 500);

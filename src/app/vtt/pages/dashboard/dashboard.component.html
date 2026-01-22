@@ -4,56 +4,6 @@
     <p class="welcome-text">Welcome back to your Virtual Table Top</p>
   </header>
 
-  <!-- Stats Section -->
-  <section class="stats-section">
-    <div class="stat-card">
-      <div class="stat-icon">📊</div>
-      <div class="stat-content">
-        <div class="stat-label">Total Campaigns</div>
-        <div class="stat-value">{{ stats.totalCampaigns }}</div>
-      </div>
-    </div>
-
-    <div class="stat-card">
-      <div class="stat-icon">🎮</div>
-      <div class="stat-content">
-        <div class="stat-label">Active Campaigns</div>
-        <div class="stat-value">{{ stats.activeCampaigns }}</div>
-      </div>
-    </div>
-
-    <div class="stat-card">
-      <div class="stat-icon">👥</div>
-      <div class="stat-content">
-        <div class="stat-label">Total Characters</div>
-        <div class="stat-value">{{ stats.totalCharacters }}</div>
-      </div>
-    </div>
-
-    <div class="stat-card">
-      <div class="stat-icon">📅</div>
-      <div class="stat-content">
-        <div class="stat-label">Total Sessions</div>
-        <div class="stat-value">{{ stats.totalSessions }}</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Actions Section -->
-  <section class="quick-actions-section">
-    <h2>Quick Actions</h2>
-    <div class="actions-grid">
-      <a 
-        *ngFor="let action of quickActions"
-        [routerLink]="action.path"
-        class="action-card"
-      >
-        <span class="action-icon">{{ action.icon }}</span>
-        <span class="action-label">{{ action.label }}</span>
-      </a>
-    </div>
-  </section>
-
   <!-- Campaigns Section -->
   <section class="campaigns-section">
     <div class="section-header">
@@ -89,6 +39,57 @@
 
         <button class="campaign-action">Continue Playing</button>
       </div>
+    </div>
+  </section>
+
+  <!-- Characters Section -->
+  <!-- <section class="characters-section">
+    <div class="section-header">
+      <h2>Recent Characters</h2>
+      <a routerLink="/vtt/characters" class="view-all-link">View All →</a>
+    </div>
+
+    <div *ngIf="isLoading" class="loading">Loading characters...</div>
+
+    <div *ngIf="!isLoading && characters.length === 0" class="no-characters">
+      <p>No characters yet. <a routerLink="/vtt/new-character">Create one now!</a></p>
+    </div>
+
+    <div *ngIf="!isLoading && characters.length > 0" class="characters-list">
+      <div *ngFor="let character of characters" class="character-card">
+        <div class="character-header">
+          <h3>{{ character.name }}</h3>
+          <span class="character-class">{{ character.class }}</span>
+        </div>
+
+        <div class="character-info">
+          <span class="info-item">
+            <span class="info-icon">⚔️</span>
+            {{ character.level }}
+          </span>
+          <span class="info-item">
+            <span class="info-icon">🛡️</span>
+            {{ character.race }}
+          </span>
+        </div>
+
+        <button class="character-action">View Details</button>
+      </div>
+    </div>
+  </section> -->  
+
+  <!-- Quick Actions Section -->
+  <section class="quick-actions-section">
+    <h2>Quick Actions</h2>
+    <div class="actions-grid">
+      <a 
+        *ngFor="let action of quickActions"
+        [routerLink]="action.path"
+        class="action-card"
+      >
+        <span class="action-icon">{{ action.icon }}</span>
+        <span class="action-label">{{ action.label }}</span>
+      </a>
     </div>
   </section>
 </div>
