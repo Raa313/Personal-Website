@@ -1,9 +1,31 @@
 <div class="auth-container">
   <div class="auth-card">
-    <h1>Welcome to VTT</h1>
     <h2>{{ isSignInMode ? 'Sign In' : 'Create Account' }}</h2>
     
+    <!-- Error Message -->
+    <div class="message error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Success Message -->
+    <div class="message success-message" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+    
     <form (ngSubmit)="onSubmit()" #authForm="ngForm">
+      <!-- Username field (only for registration) -->
+      <div class="form-group" *ngIf="!isSignInMode">
+        <label for="username">Username (optional)</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          placeholder="Enter a username"
+        />
+      </div>
+
+      <!-- Email field -->
       <div class="form-group">
         <label for="email">Email</label>
         <input
@@ -14,9 +36,11 @@
           placeholder="Enter your email"
           required
           email
+          [disabled]="isLoading"
         />
       </div>
 
+      <!-- Password field -->
       <div class="form-group">
         <label for="password">Password</label>
         <input
@@ -27,9 +51,11 @@
           placeholder="Enter your password"
           required
           minlength="6"
+          [disabled]="isLoading"
         />
       </div>
 
+      <!-- Confirm Password field (only for registration) -->
       <div class="form-group" *ngIf="!isSignInMode">
         <label for="confirmPassword">Confirm Password</label>
         <input
@@ -39,14 +65,18 @@
           [(ngModel)]="confirmPassword"
           placeholder="Confirm your password"
           required
+          [disabled]="isLoading"
         />
       </div>
 
-      <button type="submit" class="btn-primary">
-        {{ isSignInMode ? 'Sign In' : 'Create Account' }}
+      <!-- Submit Button -->
+      <button type="submit" class="btn-primary" [disabled]="isLoading">
+        <span *ngIf="!isLoading">{{ isSignInMode ? 'Sign In' : 'Create Account' }}</span>
+        <span *ngIf="isLoading">Processing...</span>
       </button>
     </form>
 
+    <!-- Toggle between sign in and create account -->
     <div class="toggle-mode">
       <p *ngIf="isSignInMode">
         Don't have an account? 
