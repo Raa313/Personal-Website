@@ -15,7 +15,7 @@ app.use(express.json());
 const pool = new Pool({
   host: process.env.DATABASE_HOST || 'postgres',
   port: process.env.DATABASE_PORT || 5432,
-  database: process.env.DATABASE_NAME || 'tabletop_db',
+  database: process.env.DATABASE_NAME || 'vtt_db',
   user: process.env.DATABASE_USER || 'postgres',
   password: process.env.DATABASE_PASSWORD || 'postgres123',
 });

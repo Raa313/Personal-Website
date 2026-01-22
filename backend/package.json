@@ -1,7 +1,7 @@
 {
-  "name": "tabletop-backend",
+  "name": "vtt-backend",
   "version": "1.0.0",
-  "description": "Backend API for tabletop gaming app",
+  "description": "Backend API for vtt gaming app",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
