@@ -38,7 +38,7 @@ CREATE TABLE characters (
     level INT DEFAULT 1,
     Race VARCHAR(100),
     Alighnment VARCHAR(100),
-    Experience_Points INT DEFAULT 0
+    Experience_Points INT DEFAULT 0,
 
     Strength INT DEFAULT 7,
     Strength_Modifier INT DEFAULT 0,
@@ -51,21 +51,20 @@ CREATE TABLE characters (
     Wisdom INT DEFAULT 7,
     Wisdom_Modifier INT DEFAULT 0,
     Charisma INT DEFAULT 7,
-    Charisma_Modifier INT DEFAULT 0,
 
+    Charisma_Modifier INT DEFAULT 0,
     Total_Hit_Points INT DEFAULT 10,
     Current_Hit_Points INT DEFAULT 10,
     Death_Saves_Successes INT DEFAULT 0,
     Death_Saves_Failures INT DEFAULT 0,
     Hit_Dice VARCHAR(50) DEFAULT '1d10',
-
     Armor_Class INT DEFAULT 10,
     Initiative INT DEFAULT 0,
     Speed INT DEFAULT 30,
     Passuive_Wisdom(Perception) INT DEFAULT 10,
 
     Proficiency_Bonus INT DEFAULT 2,
-    Inspiration BOOLEAN DEFAULT FALSE
+    Inspiration BOOLEAN DEFAULT FALSE,
 
     Saving_Throws_Strength_Proficient BOOLEAN DEFAULT FALSE,
     Saving_Throws_Strength_Proficient_Modifier INT DEFAULT 0,
@@ -116,8 +115,7 @@ CREATE TABLE characters (
     Skills_Stealth_Proficient_Modifier INT DEFAULT 0,
     Skills_Survival_Proficient BOOLEAN DEFAULT FALSE,
     Skills_Survival_Proficient_Modifier INT DEFAULT 0,
-
-
+    
     Other_Proficiencies_and_Languages TEXT,
     Features_and_Traits TEXT,
     Equipment TEXT
@@ -125,10 +123,8 @@ CREATE TABLE characters (
     Bonds TEXT,
     Ideals TEXT,
     Personality_Traits TEXT
-
     Spells TEXT, -- TODO improve
     Attacks TEXT, -- TODO improve
-
 );
 
 -- Create indexes for better performance

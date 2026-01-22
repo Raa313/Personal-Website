@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { time } from 'console';
 
 interface AuthResponse {
   message: string;
@@ -49,7 +50,8 @@ export class AuthService {
     return this.http.post<AuthResponse>(`${this.apiUrl}/auth/register`, {
       email,
       password,
-      username
+      username,
+      timestamp: new Date().toISOString()
     }).pipe(
       tap(response => this.handleAuthSuccess(response)),
       catchError(this.handleError)
@@ -59,7 +61,8 @@ export class AuthService {
   login(email: string, password: string): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(`${this.apiUrl}/auth/login`, {
       email,
-      password
+      password,
+      timestamp: new Date().toISOString()
     }).pipe(
       tap(response => this.handleAuthSuccess(response)),
       catchError(this.handleError)
